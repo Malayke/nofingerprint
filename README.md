@@ -1,6 +1,8 @@
 # nofingerprint
 remove common pentest tools fingerprint
 
+Inspired by [al0ne/Nmap_Bypass_IDS](https://github.com/al0ne/Nmap_Bypass_IDS), I listed some nmap scaner detactable fingerprint
+
 ## Remove Nmap Fingerprint
 
 ### [nselib/http.lua](https://github.com/nmap/nmap/blob/master/nselib/http.lua#L159)
