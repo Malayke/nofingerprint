@@ -7,15 +7,16 @@ USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (compatibl
 change nmap user-agent to other common user-agent
 
 
-## tcpip.cc:729
+## [tcpip.cc:729](https://github.com/nmap/nmap/blob/master/tcpip.cc#L733)
+```c
+  if (window)
+    tcp->th_win = htons(window);
+  else
+    tcp->th_win = htons(1024); /* Who cares */
+```
 nmap tcp scan defualt windows size is 1024, it can be easyly detacted by IDS/IPS device
 
-change TCP windows size value 
-
-```C
-tcp->th_win = htons(1024); /* Who cares */. 
-```
-change `1024` to other value
+so it should be change to other value 
 
 ## nselib/rdp.lua:211 
 ```lua
