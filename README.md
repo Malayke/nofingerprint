@@ -60,3 +60,9 @@ change `nmap` to other string
 
 ### Global replace "Nmap NSE" string
 
+### change default behaiver when using nmap
+1. If no host discovery options are given, Nmap sends an ICMP echo request, a TCP SYN packet to port 443, a TCP ACK packet to port 80, and an ICMP timestamp request.
+
+so can set `-PS22,135,445` flag to change host discovery behaive
+
+
