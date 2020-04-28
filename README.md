@@ -17,7 +17,7 @@ change nmap user-agent to other common user-agent
   else
     tcp->th_win = htons(1024); /* Who cares */
 ```
-nmap tcp scan defualt windows size is 1024, it can be easyly detacted by IDS/IPS device
+nmap tcp scan defualt windows size is `1024`, it can be easyly detacted by IDS/IPS device
 
 so it should be change to other value 
 
@@ -54,7 +54,7 @@ local URL_404_1 = '/nmaplowercheck' .. os.time(os.date('*t'))
 local URL_404_2 = '/NmapUpperCheck' .. os.time(os.date('*t'))
 local URL_404_3 = '/Nmap/folder/check' .. os.time(os.date('*t'))
 ```
-change "nmap" to other string
+change `nmap` to other string
 
 ### Global replace "Nmap NSE" string
 
