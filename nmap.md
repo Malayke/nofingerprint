@@ -1,25 +1,32 @@
 # Remove Nmap Fingerprint
 
-## File: tcpip.cc:729
+# nselib/http.lua:159
+change nmap user-agent to other common user-agent
+
+
+## tcpip.cc:729
+nmap tcp scan defualt windows size is 1024, it can be easyly detacted by IDS/IPS device
+
+change change TCP windows size value 
+
 ```C
 tcp->th_win = htons(1024); /* Who cares */. 
 ```
-
 change `1024` to other value
 
-## File: nselib/rdp.lua:211 
+## nselib/rdp.lua:211 
 ```lua
 local cookie = "mstshash=nmap"
 ```
 change `nmap` to other value
 
-## File: osscan2.cc:2218
+## osscan2.cc:2218
 ```C
 static u8 patternbyte = 0x43; /* character 'C' */
 ```
 change `0x43` to other hex string
 
-## File: nmap-service-probes:13473
+## nmap-service-probes:13473
 ```
 mstshash=nmap
 ```
@@ -31,9 +38,9 @@ change `nmap` to other value
 OPTIONS sip:nm
 ```
 replace SIP method to other, like `INVIKE`, and replace `nm` to other string
+![SIP request messages](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-voip-guide-52/SIP-mes-media-pro-request.htm)
 
-
-## File: nselib/http.lua:2601
+## nselib/http.lua:2601
 ```lua
 -- The URLs used to check 404s
 local URL_404_1 = '/nmaplowercheck' .. os.time(os.date('*t'))
@@ -41,3 +48,6 @@ local URL_404_2 = '/NmapUpperCheck' .. os.time(os.date('*t'))
 local URL_404_3 = '/Nmap/folder/check' .. os.time(os.date('*t'))
 ```
 change "nmap" to other string
+
+## Replace "Nmap NSE" string
+
