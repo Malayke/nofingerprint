@@ -39,7 +39,7 @@ mstshash=nmap
 ```
 change `nmap` to other value
 
-### replace all "nmap" string in nmap-service-probes
+### Replace all "nmap" string in `nmap-service-probes` file
 
 ```
 OPTIONS sip:nm
