@@ -49,5 +49,5 @@ local URL_404_3 = '/Nmap/folder/check' .. os.time(os.date('*t'))
 ```
 change "nmap" to other string
 
-## Replace "Nmap NSE" string
+## Global replace "Nmap NSE" string
 
