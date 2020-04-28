@@ -1,13 +1,13 @@
 # Remove Nmap Fingerprint
 
-# [nselib/http.lua:159](https://github.com/nmap/nmap/blob/master/nselib/http.lua#L159)
+# [nselib/http.lua](https://github.com/nmap/nmap/blob/master/nselib/http.lua#L159)
 ```c
 USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)"
 ```
 change nmap user-agent to other common user-agent
 
 
-## [tcpip.cc:729](https://github.com/nmap/nmap/blob/master/tcpip.cc#L733)
+## [tcpip.cc](https://github.com/nmap/nmap/blob/master/tcpip.cc#L733)
 ```c
   if (window)
     tcp->th_win = htons(window);
@@ -18,7 +18,7 @@ nmap tcp scan defualt windows size is 1024, it can be easyly detacted by IDS/IPS
 
 so it should be change to other value 
 
-## nselib/rdp.lua:211 
+## [nselib/rdp.lua](https://github.com/nmap/nmap/blob/master/nselib/rdp.lua#L211)
 ```lua
 local cookie = "mstshash=nmap"
 ```
