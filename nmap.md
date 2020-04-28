@@ -7,7 +7,7 @@ change nmap user-agent to other common user-agent
 ## tcpip.cc:729
 nmap tcp scan defualt windows size is 1024, it can be easyly detacted by IDS/IPS device
 
-change change TCP windows size value 
+change TCP windows size value 
 
 ```C
 tcp->th_win = htons(1024); /* Who cares */. 
