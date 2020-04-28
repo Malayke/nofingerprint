@@ -1,6 +1,9 @@
 # Remove Nmap Fingerprint
 
-# nselib/http.lua:159
+# [nselib/http.lua:159](https://github.com/nmap/nmap/blob/master/nselib/http.lua#L159)
+```c
+USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)"
+```
 change nmap user-agent to other common user-agent
 
 
