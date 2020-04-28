@@ -38,7 +38,7 @@ change `nmap` to other value
 OPTIONS sip:nm
 ```
 replace SIP method to other, like `INVIKE`, and replace `nm` to other string
-![SIP request messages](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-voip-guide-52/SIP-mes-media-pro-request.htm)
+[SIP request messages](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-voip-guide-52/SIP-mes-media-pro-request.htm)
 
 ## nselib/http.lua:2601
 ```lua
