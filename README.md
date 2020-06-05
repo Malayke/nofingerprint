@@ -65,4 +65,8 @@ change `nmap` to other string
 
 so can set `-PS22,135,445` flag to this behavior
 
+## nmap compile command
 
+```
+./configure --without-zenmap --without-nmap-update --with-libssh2=included --with-localdirs --with-libpcre=included --with-libpcre=included --prefix=/Users/xxx/bin/nmap --with-openssl=/usr/local/Cellar/openssl@1.1/1.1.1d
+```
